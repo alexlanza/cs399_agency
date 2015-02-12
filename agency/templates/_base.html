@@ -10,14 +10,13 @@
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+          href="/static/css/bootstrap.min.css">
 
     <!--load "font awesome" CDN for social media icon scaling -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
           rel="stylesheet">
 
     <!-- local style sheet for the social media icons -->
-    <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/social_media.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,7 +31,7 @@
 </head>
 <body>
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-static-top" style="margin: 0">
+<nav class="navbar navbar-fixed-top navbar-transparent">
     <div class="container" >
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -42,16 +41,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Sterling Cooper Draper Pryce</a>
+            <a class="navbar-brand" href="/">STERLING COOPER DRAPER PRYCE</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse navbar-right collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/work">Work</a></li> 
-                <li><a href="/people">People</a></li> 
-                <li><a href="/clients">Clients</a></li> 
-				<li><a href="/about">About</a></li> 
-                <li><a href="/contact">Contact</a></li> 
-                <li><a href="/careers">Careers</a></li> 
+                <li><a href="/campaigns">OUR WORK</a></li>
+                <li><a href="/about">ABOUT US</a></li>
 			</ul>
         </div>
         <!--/.nav-collapse -->
@@ -64,7 +59,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h5 class="text-muted">&#0169 {% now "Y" %} Sterling Cooper Draper Pryce</h5>
+                <h3>Sterling Cooper Draper Pryce</h3>
+                &#0169 {% now "Y" %}
             </div>
             <div class="col-sm-4">
                 <div class="social">

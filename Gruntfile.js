@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     // target.css file: source.less file
-                    "agency/static/css/main.css": "agency/static/css/less/bootstrap.less"
+                    "agency/static/css/bootstrap.css": "agency/static/css/less/bootstrap.less"
                 }
             },
             production: {
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     // target.css file: source.less file
-                    "agency/static/css/main.min.css": "agency/static/css/less/bootstrap.less"
+                    "agency/static/css/bootstrap.min.css": "agency/static/css/less/bootstrap.less"
                 }
             }
         },

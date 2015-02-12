@@ -19,13 +19,13 @@
 }
 
 .social i {
-    width: 40px;
-    height: 40px;
-    color: #FFF;
-    background-color: #909AA0;
-    font-size: 22px;
+    width: 65px;
+    height: 65px;
+    color: #cccccc;
+    background-color: #ffffff;
+    font-size: 45px;
     text-align:center;
-    padding-top: 12px;
+    padding-top: 18px;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
