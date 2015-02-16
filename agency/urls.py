@@ -10,6 +10,6 @@ urlpatterns = patterns('',
     url(r'^campaigns', 'agency.views.campaigns', name='campaigns'),
     url(r'^campaigns/mp3$', 'agency.views.mp3', name='mp3'),
     url(r'^campaigns/poll$', 'agency.views.poll', name='poll'),
-    url(r'^campaigns/email$', 'agency.views.email', name='email'),
+    url(r'^email$', 'agency.views.email', name='email'),
     url(r'^admin/', include(admin.site.urls)),
 )
