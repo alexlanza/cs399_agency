@@ -3,7 +3,7 @@ import re
 import types
 import importlib
 
-model_names = []
+model_names = ["email"]
 
 model_dir = os.path.dirname(__file__)
 if model_dir == '':
