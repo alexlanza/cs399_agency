@@ -6,3 +6,6 @@ def home(request):
 	
 def email(request):
     return render(request, "email.html", {})
+
+def email(request):
+    return render(request, "about.html", {})
