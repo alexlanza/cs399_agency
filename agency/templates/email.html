@@ -4,7 +4,12 @@
 {% block nav-performances %}class="active"{% endblock %}
 {% block titleBlock %} Bike Contest {% endblock %}
 {% block content %}
-<form action="contest1" method = "POST">
+
+    <div class="container">
+        <div class="row">
+			<br>
+			<br>
+<form class="navbar-form action="contest1" method = "POST">
     {% csrf_token %}
 	<h2> Enter your email address to get signed up for our newsletter</h2>
 	
@@ -18,5 +23,8 @@
 	<p>{{form.email}}</p>
     <input type="submit" value = "Submit"/>
 </form>
+
+</div>
+</div>
 {% endblock %}
 
