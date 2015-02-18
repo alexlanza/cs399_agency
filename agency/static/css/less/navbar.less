@@ -68,7 +68,7 @@
     &.collapse {
       display: block !important;
       visibility: visible !important;
-      height: auto !important;
+//      height: auto !important;
       padding-bottom: 0; // Override default setting
       overflow: visible !important;
     }
@@ -175,8 +175,8 @@
 
   > img {
     display: inline;
-      height: @navbar-height;
-      width: @navbar-height;
+      height: @navbar-height - @navbar-padding-vertical;
+      width: @navbar-height - @navbar-padding-vertical;
   }
 
   @media (min-width: @grid-float-breakpoint) {
