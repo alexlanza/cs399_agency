@@ -9,3 +9,6 @@ def email(request):
 
 def about(request):
     return render(request, "about.html", {})
+
+def poll(request):
+    return render(request, "poll.html", {})
