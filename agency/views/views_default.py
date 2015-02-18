@@ -7,5 +7,5 @@ def home(request):
 def email(request):
     return render(request, "email.html", {})
 
-def email(request):
+def about(request):
     return render(request, "about.html", {})
