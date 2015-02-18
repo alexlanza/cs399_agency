@@ -8,7 +8,7 @@ urlpatterns = patterns('',
 
 	url(r'^$', 'agency.views.home', name='home'),
     url(r'^about$', 'agency.views.about', name='about'),
-    url(r'^campaigns', 'agency.views.campaigns', name='campaigns'),
+    url(r'^campaigns$', 'agency.views.campaigns', name='campaigns'),
     url(r'^campaigns/mp3$', 'agency.views.mp3.mp3', name='mp3'),
     url(r'^campaigns/poll$', 'agency.views.poll', name='poll'),
     url(r'^email$', 'agency.views.email.email', name='email'),
