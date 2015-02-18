@@ -4136,17 +4136,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 40px 15px;
+  padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 60px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
 }
 .navbar-brand > img {
-  display: block;
+  display: inline;
+  height: 60px;
+  width: 60px;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -4553,10 +4554,15 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444444;
 }
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: #e7e7e7;
+}
 .navbar-transparent .navbar-brand {
   color: #e20003;
-  font-size: 195%;
+  font-size: 30px;
   font-weight: bold;
+  margin: 0;
 }
 .navbar-transparent .navbar-brand:hover,
 .navbar-transparent .navbar-brand:focus {

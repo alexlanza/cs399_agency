@@ -163,10 +163,10 @@
 
 .navbar-brand {
   float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  padding: @navbar-padding-vertical/2 @navbar-padding-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
-  height: @navbar-height;
+//  height: @navbar-height - @navbar-padding-horizontal*2;
 
   &:hover,
   &:focus {
@@ -174,7 +174,9 @@
   }
 
   > img {
-    display: block;
+    display: inline;
+      height: @navbar-height;
+      width: @navbar-height;
   }
 
   @media (min-width: @grid-float-breakpoint) {
@@ -664,13 +666,14 @@
 // Transparent navbar
 
 .navbar-transparent {
-//  background-color: @navbar-inverse-bg;
-//  border-color: @light_grey;
+  background-color: rgba(255,255,255,0.95);
+  border-color: @navbar-default-border;
 
   .navbar-brand {
     color: @brand-primary;
-    font-size: 195%;
+    font-size: 30px;
     font-weight: bold;
+    margin: 0;
     &:hover,
     &:focus {
       color: #000000;
