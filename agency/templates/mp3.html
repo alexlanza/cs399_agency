@@ -1,7 +1,11 @@
 {% extends '_base.html' %}
 {% block content %}
-    <form>
+    <br><br><br>
+    <div class="container">
+    <form action="mp3" method="POST">
     {% csrf_token %}
-    {{ form.as_table }}
+        {{ form.as_p }}
+        <input type="submit" value="Gimme my mp3!">
     </form>
+    </div>
 {% endblock %}
