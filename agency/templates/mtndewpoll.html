@@ -10,7 +10,15 @@ Home
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3>Polls</h3>
+            <h3>How do you Dew?</h3>
+			<form action="/mtndewpoll/vote/" method="post">
+
+			{% for choice in form.field.flavor %}
+				{{ choice.value }}
+			{% endfor %}
+			
+			<input type="submit" value="Vote" />
+			</form>
         </div>
     </div>
 </div>
