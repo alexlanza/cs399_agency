@@ -1,6 +1,18 @@
-.splash-jumbotron {
-    background-image: url('/static/images/awards.jpg');
-    background-size: cover;
-    height: 800px;
-    margin-bottom: 0;
+#jumbo {
+  position: fixed; 
+  top: -42%;
+  left: -50%; 
+  width: 200%;
+  height: 170%;
+}
+#jumbo img {
+  position: absolute;
+    padding-top: 250px;
+  top: 0;
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 40%;
 }
