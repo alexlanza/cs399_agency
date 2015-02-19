@@ -17,3 +17,14 @@ class Mp3Choice(models.Model):
         return self.choice_text
 
 
+class Mp3CollectedData(models.Model):
+    """ Stores the data for each poll that is submitted """
+    service = models.CharField(max_length=100)
+    genre = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    created = models.DateTimeField('date created', auto_now=True)
+
+    def __str__(self):
+        return self.email
+
+
