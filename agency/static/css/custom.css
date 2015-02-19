@@ -1,0 +1,6 @@
+.splash-jumbotron {
+    background-image: url('/static/images/awards.jpg');
+    background-size: cover;
+    height: 800px;
+    margin-bottom: 0;
+}
