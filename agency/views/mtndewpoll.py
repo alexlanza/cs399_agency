@@ -24,7 +24,6 @@ def mtndewpoll(request):
         if form.is_valid():
             messages.success(request, 'Thanks for voting!')
             flavor = form.cleaned_data['flavor']
-            print flavor
             vote = MtnDewFlavorPoll(flavor=flavor)
             vote.save()
         else:
