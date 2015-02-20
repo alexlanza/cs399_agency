@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django import forms
 from django.http import HttpResponseRedirect
 from django.forms import ModelForm
+from django.contrib import messages
 
 from agency.models.mp3 import Mp3Question, Mp3Choice, Mp3CollectedData
 
@@ -29,10 +30,10 @@ def mp3(request):
     success = ""
     collected_data = ""
     if request.method == 'POST':
+
         form = Mp3Form(request.POST)
         if form.is_valid():
-            form.errors['success'] = "Success! Your mp3 is on the way."
-
+            messages.success(request, 'Success! Check your email for your free mp3 download')
             service = request.POST.get('service', '')
             genre = request.POST.get('genre', '')
             email = form.cleaned_data['email']
@@ -44,4 +45,4 @@ def mp3(request):
         form = Mp3Form()
     else:
         return HttpResponseRedirect('/404/')
-    return render(request, 'mp3.html', { 'form': form, 'collected_data': collected_data, 'success': success })
+    return render(request, 'mp3.html', { 'form': form, 'collected_data': collected_data })
