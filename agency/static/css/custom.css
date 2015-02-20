@@ -37,7 +37,7 @@
 .banner {
     width: 100%;
     height: 300px;
-    background: url('/static/images/banner.png');
+    background: url('/static/images/banner.jpg');
     background-size: cover;
     margin-bottom: 20px;
 }
