@@ -7,6 +7,7 @@
 {% block content %}
 <!-- checks for successful POST and displays success message -->
     <div class="container">
+        <h3>Get a free Amazon mp3 download</h3>
         <div class="row">
             <div class="col-sm-12">
             {% if messages %}
@@ -16,14 +17,14 @@
                 {% endfor %}
                 </div>
             {% endif %}
-
-            <h3>Get a free Amazon mp3 download</h3>
             <p>Fill out the form below and we will send you a link to a free song download!</p>
-
             <form action="mp3" method="POST">
+                {% load bootstrap3 %}
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input class="btn btn-primary" type="submit" value="Gimme my mp3!">
+                {%  bootstrap_form form %}
+                {% buttons %}
+                    <button class="btn btn-primary" type="submit">Gimme my mp3!</button>
+                {% endbuttons %}
             </form>
             </div><!--/col-sm-12-->
         </div><!-- /row-->
