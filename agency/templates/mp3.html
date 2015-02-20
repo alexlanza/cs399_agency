@@ -10,14 +10,7 @@
         {% endfor %}
         </div>
     {% endif %}
-    <div class = 'alert alert-success' role="alert">
-        {% for item in collected_data %}
-            <p>{{ item.email }}</p>
-            <p>{{ item.service }}</p>
-            <p>{{ item.genre }}</p>
-            <p>{{ item.created }}</p>
-        {% endfor %}
-    </div>
+
     <form action="mp3" method="POST">
     {% csrf_token %}
         {{ form.as_p }}

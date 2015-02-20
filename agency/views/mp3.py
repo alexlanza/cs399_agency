@@ -37,12 +37,14 @@ def mp3(request):
             service = request.POST.get('service', '')
             genre = request.POST.get('genre', '')
             email = form.cleaned_data['email']
+            # save the new information in the Mp3CollectedData table
             mp3_collected_data = Mp3CollectedData(service=service, genre=genre, email=email)
             mp3_collected_data.save()
             return HttpResponseRedirect("/campaigns/mp3")
     elif request.method == 'GET':
-        collected_data = Mp3CollectedData.objects.all()
         form = Mp3Form()
     else:
-        return HttpResponseRedirect('/404/')
+        return HttpResponseRedirect('/')
+    # get all the data people have entered thus far in the Mp3CollectedData table
+    collected_data = Mp3CollectedData.objects.all()
     return render(request, 'mp3.html', { 'form': form, 'collected_data': collected_data })
