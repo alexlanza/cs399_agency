@@ -26,6 +26,10 @@ TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+### Added this to enable messages framework ###
+TEMPLATE_CONTEXT_PROCESSORS = ('django.contrib.messages.context_processors.messages',
+                                'django.contrib.auth.context_processors.auth',)
+
 ALLOWED_HOSTS = []
 
 
