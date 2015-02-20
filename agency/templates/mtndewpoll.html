@@ -3,24 +3,31 @@
 {% endblock %}
 
 {% block title %}
-Home
+    Vote for a New Flavor of Mountain Dew
 {% endblock %}
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <h3>How do you Dew?</h3>
-			<form action="/mtndewpoll/vote/" method="post">
-
-			{% for choice in form.field.flavor %}
-				{{ choice.value }}
-			{% endfor %}
-			
-			<input type="submit" value="Vote" />
-			</form>
+    <div class="container">
+        <div class="row">
+            <h3>Vote for a New Flavor of Mountain Dew</h3>
+            <div class="col-sm-6">
+                {% if messages %}
+                    <div class='alert alert-success' role="alert">
+                        {% for message in messages %}
+                            {{ message.message }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <form action="mtndewpoll" method="POST">
+                    {% load bootstrap3 %}
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {% buttons %}
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    {% endbuttons %}
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
