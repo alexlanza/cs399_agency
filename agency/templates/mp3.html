@@ -6,6 +6,7 @@
 
 {% block content %}
 <!-- checks for successful POST and displays success message -->
+
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -55,5 +56,20 @@
                     culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div><!-- /row-->
+        <div class="row">
+            <h2>Total Votes</h2>
+            <div class="col-sm-6">
+                <h4>Genre</h4>
+                {% for k, v in genre_votes.items %}
+                    {{ k }}: {{ v }}
+                {% endfor %}
+            </div>
+            <div class="col-sm-6">
+                <h4>Music Service</h4>
+                {% for k, v in service_votes.items %}
+                    {{ k }}: {{ v }}
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}
