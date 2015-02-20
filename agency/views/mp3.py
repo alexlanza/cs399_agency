@@ -15,11 +15,11 @@ class Mp3Form(forms.Form):
     # creates dropdown html "select" boxes using the above 2 variables as the options for the dropdowns
     service = forms.ChoiceField(choices=SERVICE_CHOICES,
                                 widget=forms.Select(),
-                                label="Please choose your favorite digital music service: ")
+                                label="Please choose your favorite digital music service ")
     genre = forms.ChoiceField(choices=GENRE_CHOICES,
-                              label="Please choose your favorite genre of music: ")
+                              label="Please choose your favorite genre of music ")
 
-    email = forms.EmailField(max_length=255, label="Please enter your email: ")
+    email = forms.EmailField(max_length=255, label="Please enter your email ")
 
     # class Meta:
     #     model = Mp3Question

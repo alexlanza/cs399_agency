@@ -17,19 +17,13 @@
                 </div>
             {% endif %}
 
-            <h1>Get a free Amazon mp3 download</h1>
+            <h3>Get a free Amazon mp3 download</h3>
             <p>Fill out the form below and we will send you a link to a free song download!</p>
 
-            {% if form.subject.errors %}
-                {% for error in form.subject.errors %}
-                    <p>{{ error|escape }}</p>
-                {% endfor %}
-            {% endif %}
-
             <form action="mp3" method="POST">
-            {% csrf_token %}
+                {% csrf_token %}
                 {{ form.as_p }}
-                <input type="submit" value="Gimme my mp3!">
+                <input class="btn btn-primary" type="submit" value="Gimme my mp3!">
             </form>
             </div><!--/col-sm-12-->
         </div><!-- /row-->
