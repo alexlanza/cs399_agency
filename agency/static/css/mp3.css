@@ -1,0 +1,12 @@
+/* custom styling for mp3.html page */
+
+
+.errorlist {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 0px;
+}

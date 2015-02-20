@@ -1,21 +1,31 @@
 {% extends '_base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/mp3.css">
+{% endblock %}
+
 {% block content %}
+<!-- checks for successful POST and displays success message -->
     <div class="container">
-    <h1>Get a free Amazon mp3 download</h1>
-    <p>Fill out the form below and we will send you a link to a free song download!</p>
-    {% if messages %}
-        <div class = 'alert alert-success' role="alert">
-        {% for message in messages %}
-            {{ message.message }}
-        {% endfor %}
-        </div>
-    {% endif %}
+        <div class="row">
+            <div class="col-sm-12">
+            {% if messages %}
+                <div class = 'alert alert-success' role="alert">
+                {% for message in messages %}
+                    {{ message.message }}
+                {% endfor %}
+                </div>
+            {% endif %}
 
-    <form action="mp3" method="POST">
-    {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Gimme my mp3!">
-    </form>
+            <h3>Get a free Amazon mp3 download</h3>
+            <p>Fill out the form below and we will send you a link to a free song download!</p>
 
+            <form action="mp3" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="btn btn-primary" type="submit" value="Gimme my mp3!">
+            </form>
+            </div><!--/col-sm-12-->
+        </div><!-- /row-->
     </div>
 {% endblock %}
