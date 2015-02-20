@@ -21,13 +21,8 @@ class Mp3Form(forms.Form):
 
     email = forms.EmailField(max_length=255, label="Please enter your email ")
 
-    # class Meta:
-    #     model = Mp3Question
-    #     fields = '__all__'
-
 
 def mp3(request):
-    success = ""
     collected_data = ""
     if request.method == 'POST':
 
