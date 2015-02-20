@@ -7,10 +7,10 @@
 {% endblock %}
 {% block content %}
 
-    <div class="container">
+    <div class="container container-top-padding">
         <div class="row">
-            <h3>Vote for a New Flavor of Mountain Dew</h3>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h3>Vote for a New Flavor of Mountain Dew</h3>
                 {% if messages %}
                     <div class='alert alert-success' role="alert">
                         {% for message in messages %}
@@ -26,6 +26,12 @@
                         <button class="btn btn-primary" type="submit">Submit</button>
                     {% endbuttons %}
                 </form>
+             <p class="tiny">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
     </div>
