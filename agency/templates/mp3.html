@@ -3,7 +3,13 @@
     <div class="container">
     <h1>Get a free Amazon mp3 download</h1>
     <p>Fill out the form below and we will send you a link to a free song download!</p>
-    {{ success }}
+    {% if messages %}
+        <div class = 'alert alert-success' role="alert">
+        {% for message in messages %}
+            {{ message.message }}
+        {% endfor %}
+        </div>
+    {% endif %}
     <div class = 'alert alert-success' role="alert">
         {% for item in collected_data %}
             <p>{{ item.email }}</p>
