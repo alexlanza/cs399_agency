@@ -16,3 +16,7 @@
   min-width: 50%;
   min-height: 40%;
 }
+
+.container-top-padding {
+    padding-top: 20px;
+}

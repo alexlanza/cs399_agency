@@ -2,19 +2,26 @@
 {% block nav-performances %}class="active"{% endblock %}
 {% block titleBlock %} Email Newsletter {% endblock %}
 {% block content %}
-    <div class="container">
+    <div class="container container-top-padding">
+        <h3>Sign Up for the Newsletter</h3>
+
         <div class="row">
-            <div class="col-xs-12">
-                <form class="navbar-form" action="email" method="POST">
+            <div class="col-sm-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="col-sm-6 col-sm-offset-1">
+                {% load bootstrap3 %}
+                <form action="email" method="POST">
                     {% csrf_token %}
-                    <h2> Enter your email address to get signed up for our newsletter</h2>
-                    <p> First Name: </p>
-                    <p>{{ form.first_name }}</p>
-                    <p> Last Name: </p>
-                    <p>{{ form.last_name }}</p>
-                    <p> Your Email: </p>
-                    <p>{{ form.email }}</p>
-                    <input type="submit" value="Submit"/>
+                    {% bootstrap_form form %}
+                    {% buttons %}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    {% endbuttons %}
                 </form>
             </div>
         </div>
