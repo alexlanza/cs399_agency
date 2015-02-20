@@ -1,30 +1,23 @@
 {% extends "_base.html" %}
-
-
 {% block nav-performances %}class="active"{% endblock %}
 {% block titleBlock %} Email Newsletter {% endblock %}
 {% block content %}
-
     <div class="container">
         <div class="row">
-			<br>
-			<br>
-<form class="navbar-form action="contest1" method = "POST">
-    {% csrf_token %}
-	<h2> Enter your email address to get signed up for our newsletter</h2>
-	
-		
-	<br></br>
-	<p> First Name: </p>
-    <p>{{form.firstname}}</p>
-	<p> Last Name: </p>
-	<p>{{form.lastname}}</p>
-	<p> Your Email: </p>
-	<p>{{form.email}}</p>
-    <input type="submit" value = "Submit"/>
-</form>
-
-</div>
-</div>
+            <div class="col-xs-12">
+                <form class="navbar-form" action="email" method="POST">
+                    {% csrf_token %}
+                    <h2> Enter your email address to get signed up for our newsletter</h2>
+                    <p> First Name: </p>
+                    <p>{{ form.first_name }}</p>
+                    <p> Last Name: </p>
+                    <p>{{ form.last_name }}</p>
+                    <p> Your Email: </p>
+                    <p>{{ form.email }}</p>
+                    <input type="submit" value="Submit"/>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 

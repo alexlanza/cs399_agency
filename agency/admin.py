@@ -1,6 +1,6 @@
 from agency.models import MtnDewFlavorPoll
-from agency.models import email_model
+from agency.models import Email
 from django.contrib import admin
 
 admin.site.register(MtnDewFlavorPoll)
-admin.site.register(email_model)
+admin.site.register(Email)
